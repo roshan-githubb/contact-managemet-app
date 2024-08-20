@@ -36,10 +36,24 @@ const ContactsList = () => {
       ...doc.data(),
     }));
 
+    
+    console.log("Contacts before sorting:", newContacts.map(contact => contact.name));
+
+    
     setContacts((prevContacts) => {
       const contactIds = new Set(prevContacts.map((contact) => contact.id));
       const filteredContacts = newContacts.filter((contact) => !contactIds.has(contact.id));
-      return [...prevContacts, ...filteredContacts];
+      const allContacts = [...prevContacts, ...filteredContacts];
+
+      
+      const sortedContacts = allContacts.sort((a, b) =>
+        a.name.trim().toLowerCase().localeCompare(b.name.trim().toLowerCase())
+      );
+
+      
+      console.log("Contacts after sorting:", sortedContacts.map(contact => contact.name));
+
+      return sortedContacts;
     });
   };
 

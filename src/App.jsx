@@ -38,10 +38,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-100 flex">
-        {/* Sidebar */}
         <Sidebar />
 
-        {/* Main Content */}
         <div className="flex-grow ml-64 p-10">
           <div className="container mx-auto">
             <Routes>
