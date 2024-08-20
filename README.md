@@ -5,7 +5,7 @@ This is a React-based Contact Management Application that allows users to manage
 ### Features
 Add New Contacts: Users can add new contacts with details such as name, email, and phone number.
 View Contacts: Display contacts with infinite scrolling.
-Sort Contacts: Contacts are sorted alphabetically, ignoring case.
+Sort Contacts: Contacts are sorted alphabetically (A to Z).
 Responsive Design: Works well on both desktop and mobile devices.
 
 ### How to run
