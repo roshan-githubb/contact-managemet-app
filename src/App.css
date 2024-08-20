@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    aside {
+      max-width: 301px;
+      max-height: 607px;
+      overflow-y: auto;
+    }
+  }
+  

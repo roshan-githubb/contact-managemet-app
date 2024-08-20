@@ -36,22 +36,14 @@ const ContactsList = () => {
       ...doc.data(),
     }));
 
-    
-    console.log("Contacts before sorting:", newContacts.map(contact => contact.name));
-
-    
     setContacts((prevContacts) => {
       const contactIds = new Set(prevContacts.map((contact) => contact.id));
       const filteredContacts = newContacts.filter((contact) => !contactIds.has(contact.id));
       const allContacts = [...prevContacts, ...filteredContacts];
 
-      
       const sortedContacts = allContacts.sort((a, b) =>
         a.name.trim().toLowerCase().localeCompare(b.name.trim().toLowerCase())
       );
-
-      
-      console.log("Contacts after sorting:", sortedContacts.map(contact => contact.name));
 
       return sortedContacts;
     });
@@ -61,14 +53,12 @@ const ContactsList = () => {
     <>
       <div className="flex justify-between items-center mb-4">
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none"
+          className="bg-green-500 text-white px-4 py-2 rounded-md mr-1 hover:bg-green-600 focus:outline-none"
           onClick={() => navigate('/')} 
         >
           <FontAwesomeIcon icon={faPlus} className="mr-2" />
           Add New Contact
         </button>
-        <h2 className="text-3xl font-bold text-center flex-grow">Your Contacts</h2>
-        <div className="w-32"></div> 
       </div>
       <div className="max-w-3xl mx-auto p-6">
         <InfiniteScroll
