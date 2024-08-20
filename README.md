@@ -14,6 +14,9 @@ This is a React-based Contact Management Application that allows users to manage
 3. ```npm install```
 4. ```npm run dev```
 
+### Live hosted link 
+- https://contact-management-rb.tiiny.site/
+
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
